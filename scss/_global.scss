@@ -1,0 +1,167 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  font-size: 15px;
+  line-height: 1.3;
+  color: $veryDarkBlue;
+  background-color: $veryLightGray;
+}
+
+.hero {
+  max-width: 510px;
+  text-align: center;
+  margin: auto;
+  margin-top: 90px;
+  margin-bottom: 78px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @include breakpoint(large) {
+    max-width: 524px;
+    margin-top: 88px;
+    margin-bottom: 66px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .top {
+    font-size: 22px;
+    margin-bottom: 16px;
+    font-weight: 200;
+
+    @include breakpoint(large) {
+      font-size: 2rem;
+    }
+  }
+
+  .middle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 22px;
+
+    @include breakpoint(large) {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .bottom {
+    color: $grayishBlue;
+    font-size: 1rem;
+    font-weight: 200;
+  }
+}
+
+.cards {
+  margin: auto;
+  max-width: 310px;
+
+  @include breakpoint(large) {
+    max-width: 350px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 30px;
+    margin-bottom: 50px;
+  }
+}
+
+.card-1 {
+  border-radius: 10px;
+  margin-bottom: 26px;
+
+  @include breakpoint(large) {
+    transform: translateY(140px);
+  }
+
+  .border {
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    height: 3px;
+    background-color: $cyan;
+  }
+}
+
+.card-2 {
+  border-radius: 10px;
+  margin-bottom: 26px;
+  grid-column: 2/2;
+
+  .border {
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    height: 3px;
+    background-color: $red;
+  }
+}
+
+.card-3 {
+  border-radius: 10px;
+  margin-bottom: 26px;
+  grid-column: 2/2;
+
+  .border {
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    height: 3px;
+    background-color: $orange;
+  }
+}
+
+.card-4 {
+  border-radius: 10px;
+  margin-bottom: 26px;
+
+  @include breakpoint(large) {
+    transform: translateY(-140px);
+  }
+
+  .border {
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    height: 3px;
+    background-color: $blue;
+  }
+}
+
+.card {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 56px;
+
+  .header {
+    font-size: 22px;
+    font-weight: 600;
+    color: $veryDarkBlue;
+    padding-bottom: 10px;
+  }
+
+  .desc {
+    color: $grayishBlue;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 2;
+    padding-bottom: 36px;
+  }
+
+  img {
+    padding-left: 180px;
+    padding-bottom: 26px;
+  }
+}
+
+.box {
+  box-shadow: 0 8px 16px -6px rgba(76, 78, 97, 0.9);
+}

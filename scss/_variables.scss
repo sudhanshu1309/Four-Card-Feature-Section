@@ -1,0 +1,28 @@
+//Colors
+
+//Primary
+$red: rgb(234, 83, 83);
+$cyan: rgb(69, 211, 211);
+$orange: rgb(252, 175, 74);
+$blue: rgb(84, 158, 242);
+
+//Neutral
+$veryDarkBlue: rgb(76, 78, 97);
+$grayishBlue: rgb(163, 165, 174);
+$veryLightGray: rgb(250, 250, 250);
+
+//Fonts
+$font: "Poppins", sans-serif;
+
+//Breakpoints
+$breakpoints: (
+  medium: 640px,
+  large: 899px,
+);
+
+//Mixin
+@mixin breakpoint($size) {
+  @media screen and(min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
